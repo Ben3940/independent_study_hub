@@ -1,0 +1,252 @@
+﻿/* ---------- tag selectors ---------- */
+
+body
+{
+    text-align: center;
+}
+
+h1 {
+    background: forestgreen;
+    color: #fff;
+    text-align: center;
+    font-size: 64px;
+    margin: 0;
+}
+
+p{
+    font-size:20px;
+}
+
+section{
+    text-align:center;
+    justify-content:center;
+}
+
+button {
+    font-size: 16px;
+    padding: 7px;
+    background-color: white;
+    transition-duration: 0.4s;
+    border-radius: 12px;
+    border: 2px solid #4CAF50;
+}
+
+button:hover{
+    background-color: #4CAF50;
+    color: white;
+}
+
+table {
+    margin-top: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse;
+}
+
+tr:hover {
+    background-color: #f5f5f5;
+}
+
+th, td{
+    padding:10px;
+    text-align: center;
+    border-bottom: solid green;
+}
+
+header{
+    padding: 20px;
+    background-color: forestgreen;
+}
+
+header.home {
+    border-radius: 50px;
+}
+
+
+/* ---------- Class selectors ---------- */
+
+.page-link{
+    display: inline;
+}
+
+.italic{
+    font-style: italic;
+}
+
+.quote{
+    color: #fff;
+}
+
+.pictures {
+    margin-top: 10px;
+}
+
+/* Login CSS */
+
+body.login { /*Sets background color of login screen and general text font*/
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background: #34495e;
+}
+
+.box { /*Creates smaller box that contains actual login fields/buttons*/
+    width: 300px;
+    padding: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #191919;
+    text-align: center;
+}
+
+/*Navigation bar CSS*/
+
+.navbar { /*Creates the main body of navbar.  Sticky allows the navbar to scrolldown along with the page*/
+    overflow: hidden;
+    background-color: #333;
+    position: sticky;
+    top: 0;
+}
+
+.navbar a{ /*Aligns the items in the navbar properly and specifies text color and size*/
+    float:left;
+    display:block;
+    color:#fff;
+    text-align:center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
+.navbar a.right{ /*Specially labeled items in navbar are aligned to the right*/
+    float:right;
+}
+
+.navbar a:hover{ /*Gives "highlighting" effect when mouse hovers over navbar item*/
+    background-color:#ddd;
+    color: black;
+}
+
+.navbar a.active{ /*Makes item in navbar be different color to signify link connects to current page*/
+    background-color: #666;
+    color: #fff;
+}
+
+.box h1{ /*Modifies login header from typical header styling of webpages*/
+    background: none;
+    text-transform:uppercase;
+    font-weight: 500;
+    font-size: 32px;
+}
+
+.box input[type="text"], .box input[type="password"] { /*Sets style of input feilds when nothing is being done*/
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #3498db;
+    padding: 14px 10px;
+    width: 200px;
+    outline: none; /*Stops input fields from "lighting up" when clicked on (slightly ruins look of login screen)*/
+    color: #fff;
+    border-radius: 24px;
+    transition: 0.25s;
+}
+
+.box input[type="text"]:focus, .box input[type="password"]:focus { /* When input field is selected width and border color change (to signify selection)*/
+    width: 280px;
+    border-color: #2ecc71;
+}
+
+.box input[type="submit"]{ /*Sets style of login button when nothing is being done*/
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid #2ecc71;
+    padding: 14px 40px;
+    outline: none; /*Stops input fields from "lighting up" when clicked on (slightly ruins look of login screen)*/
+    color: #fff;
+    border-radius: 24px;
+    transition: 0.25s;
+    cursor: pointer; /*Changes mouse cursor to pointer style when hovering over login button*/
+}
+
+.box input[type="submit"]:hover{ /*When login button is hovered over, button background fills in*/
+    background: #2ecc71;
+}
+
+/* Ribbon CSS */
+/* The protector class is needed as a wrapper for our ribbon class.  Without it, the ends of the ribbon will not fold
+behind properly (thus ruining the look of a ribbon)*/
+.protector{
+position: relative;
+z-index: 1;
+}
+
+/* Class that creates each ribbon subheader*/
+.ribbon {
+    font-size: 16px !important;
+    /* This ribbon is based on a 16px font side and a 24px vertical rhythm. I've used em's to position each element for scalability. If you want to use a different font size you may have to play with the position of the ribbon elements */
+    width: 25%;  /* Think of this a master control of ribbon length.  Currently is set to 25% the length of the screen*/
+    position: relative;
+    background: ForestGreen;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 1rem; /* Ribbon width, ribbon length */
+    margin: 2rem auto 2rem; /* Based on 24px vertical rhythm. 48px bottom margin - normally 24 but the ribbon 'graphics' take up 24px themselves so we double it. */
+}
+
+/* Creates folded edges to make ribbon seemd to pop out*/
+.ribbon:before, .ribbon:after {
+    content: "";
+    position: absolute;
+    display: block;
+    bottom: -1rem;
+    border: 1.5em solid green;
+    z-index: -1;
+}
+
+/* Left tail positioning*/
+.ribbon:before {
+    left: -2rem;
+    border-right-width: 1.5rem;
+    border-left-color: transparent; /* Forked end design of tail*/
+}
+
+/* Right tail positioning */
+.ribbon:after {
+    right: -2rem;
+    border-left-width: 1.5rem;
+    border-right-color: transparent; /* Forked end design of tail*/
+}
+
+/* The blocks of CSS code below create the folded edges of the ribbon's tails */
+.ribbon .ribbon-content:before, .ribbon .ribbon-content:after {
+    content: "";
+    position: absolute;
+    display: block;
+    border-style: solid;
+    border-color: DarkGreen transparent transparent transparent;
+    bottom: -1rem;
+}
+
+/* Underside of ribbon to give illusion of ribbon folding (you can see this on left side)*/
+.ribbon .ribbon-content:before {
+    left: 0;
+    border-width: 1rem 0 0 1rem;
+}
+
+/* Underside of ribbon to give illusion of ribbon folding (you can see this on right side)*/
+.ribbon .ribbon-content:after {
+    right: 0;
+    border-width: 1rem 1rem 0 0;
+}
+
+/* Upload form*/
+
+/* ---------- Id selectors ---------- */
+

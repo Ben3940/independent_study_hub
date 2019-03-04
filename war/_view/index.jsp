@@ -16,6 +16,13 @@
 		is pressed, it will execute a doGet (method=doGet) to their respective Servlet-->
 		
 		<!-- JSP must call doGet -->
+		<form action="${pageContext.servletContext.contextPath}/Home" method="doGet">
+			<table>
+				<tr>
+					<td><input type="Submit" name="submit" value="Home"></td>
+				</tr>
+			</table>
+		</form>
 		<form action="${pageContext.servletContext.contextPath}/addNumbers" method="doGet">
 			<table>
 				<tr>
