@@ -16,10 +16,10 @@
 		is pressed, it will execute a doGet (method=doGet) to their respective Servlet-->
 		
 		<!-- JSP must call doGet -->
-		<form action="${pageContext.servletContext.contextPath}/Home" method="doGet">
+		<form action="${pageContext.servletContext.contextPath}/Login" method="doGet">
 			<table>
 				<tr>
-					<td><input type="Submit" name="submit" value="Home"></td>
+					<td><input type="Submit" name="submit" value="Login"></td>
 				</tr>
 			</table>
 		</form>
