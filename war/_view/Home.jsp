@@ -6,9 +6,9 @@
 <head>
     <meta charset="utf-8" />
     <title>Independent Study Hub</title>
-
-    <link href="./style.css" type="text/css" rel="stylesheet" />
-    
+	<style type="text/css">
+		<%@ include file="style.css" %>
+	</style>
 </head>
 <body>
     <header class="home">
@@ -46,11 +46,11 @@
         <a href="Upload.html"><button type="button">Upload!</button></a>
         	<div class="pictures">
 	            <!-- This creates the 4-square of images that will link to the Previous work page is you click on any of the pictures (due to wraping in <a>) -->
-	            <a href="./war/_view/Research.jsp" id="img1">
-	                <img src="../style/FurBall.jpg" />
-	                <img src="../style/FurBall.jpg" />
-	                <img src="../style/FurBall.jpg" />
-	                <img src="../style/FurBall.jpg" />
+	            <a href="http://localhost:8081/independent_study_hub/Research" id="img1">
+	                <img src="style/FurBall.jpg" />
+	                <img src="style/FurBall.jpg" />
+	                <img src="style/FurBall.jpg" />
+	                <img src="style/FurBall.jpg" />
 	            </a>
          
         	</div>

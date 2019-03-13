@@ -6,7 +6,9 @@
 <head>
     <meta charset="utf-8" />
     <title>Login</title>
-    <link href="style.css" type="text/css" rel="stylesheet" />
+	<style type="text/css">
+		<%@ include file="style.css" %>
+	</style>
 </head>
 <body class="login">
     <form action="${pageContext.servletContext.contextPath}/Home" method="doGet">

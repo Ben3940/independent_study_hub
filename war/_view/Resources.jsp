@@ -6,7 +6,9 @@
 <head>
     <meta charset="utf-8" />
     <title>Resources</title>
-    <link href="./style.css" type="text/css" rel="stylesheet" />
+	<style type="text/css">
+		<%@ include file="style.css" %>
+	</style>
 </head>
 <body>
     <header>
@@ -14,11 +16,11 @@
     </header>
     
     <div class="navbar">
-        <a href="Home_Page.html">Home</a>
+        <a href="http://localhost:8081/independent_study_hub/Home">Home</a>
         <a href="#" class="active">Resources</a>
-        <a href="Research.html">Previous Work</a>
-        <a href="Inventory.html" class="right">Inventory</a>
-        <a href="Upload.html" class="right">Upload</a>
+        <a href="http://localhost:8081/independent_study_hub/Research">Previous Work</a>
+        <a href="http://localhost:8081/independent_study_hub/Inventory" class="right">Inventory</a>
+        <a href="http://localhost:8081/independent_study_hub/Upload" class="right">Upload</a>
     </div>    
 </body>
 </html>
